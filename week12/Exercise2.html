@@ -5,26 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 2</title>
-    <script>
-        function checkpassword() {
-            var pw = document.getElementById("password1");
-            alert(pw);
-            var chpw = document.getElementById("password2");
-            if (pw != chpw) 
-                alert("Passwords don't match");
-            else
-                alert("Passwords match");
-        }
-    </script>
-    </head>
+</head>
 <body>
-    <form>
-        <label for="password1">Enter password: </label>
-        <input type="password" name="password1"><br><br>
-        <label for="password2">Re-Enter password: </label>
-        <input type="password" name="password2"><br><br>
-        <button type = "submit" onclick="checkpassword()">Submit</button>
-        <button type="reset">Clear</button>
-    </form>
+    <h1 id="heading" onclick="name()">Old Heading. Click to change</h1>
+    Click on the button to know the current time.
+    <p id="para"></p>
+
+    <button onclick="document.getElementById('para').innerHTML=Date()">Click</button>
+    <script>
+        function name(){
+            document.getElementById("heading").innerHTML="New Heading";
+        }
+         
+    </script>
 </body>
 </html>
